@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Film1 from './pages/Film1'
 import Film2 from './pages/Film2'
 import Film3 from './pages/Film3'
-
+import Compra from './pages/Compra';
 const Stack = createNativeStackNavigator()
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
         <Stack.Screen name='Film1' component={ Film1 } options={{ title: 'Film 1'}} />
         <Stack.Screen name='Film2' component={ Film2 } options={{ title: 'Film 2'}} />
         <Stack.Screen name='Film3' component={ Film3 } options={{ title: 'Film 3'}} />
+        <Stack.Screen name='Compra' component={ Compra } options={{ title: 'Compra'}} />
       </Stack.Navigator>
     </NavigationContainer>
   )
