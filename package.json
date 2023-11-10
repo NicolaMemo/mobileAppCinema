@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@react-navigation/native-stack": "^6.9.17",
+    "@rneui/base": "^4.0.0-rc.8",
+    "@rneui/themed": "^4.0.0-rc.8",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
