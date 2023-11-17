@@ -5,9 +5,9 @@ import {
     Image,
     StyleSheet,
     ScrollView,
+    ActivityIndicator
   } from "react-native";
-  
-  export default function Compra({ navigation }) {
+ export default function Compra({ navigation }) {
     return (
       <View style={styles.container}>
         <ScrollView>
