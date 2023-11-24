@@ -16,6 +16,7 @@ export default function ActualFilm({ route, navigation }) {
   const { id } = route.params;
   const [isLoading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const image = {uri: 'https://i.imgur.com/8SVlATb.png'};
 
   const getMoviesFromApi = async (id) => {
     try {
@@ -37,7 +38,7 @@ export default function ActualFilm({ route, navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <ImageBackground resizeMode="cover">
+        <ImageBackground source={image} resizeMode="cover">
           {isLoading ? (
             <ActivityIndicator />
           ) : (
@@ -113,8 +114,6 @@ export default function ActualFilm({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 2,
-    margin: 10,
   },
   logo: {
     height: 150,

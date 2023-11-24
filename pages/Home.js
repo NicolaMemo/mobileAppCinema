@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 export default function Home({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const image = {uri: 'https://i.imgur.com/8SVlATb.png'};
   const getMoviesFromApi = async () => {
     try {
       const response = await fetch(
@@ -32,9 +33,9 @@ export default function Home({ navigation }) {
     getMoviesFromApi();
   }, []);
   return (
-    <View style={styles.container}>
+     <View style={styles.container}>
       <ScrollView>
-        <ImageBackground resizeMode="cover">
+        <ImageBackground source={image} resizeMode="cover">
           {isLoading ? (
             <ActivityIndicator />
           ) : (
@@ -77,8 +78,6 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 2,
-    margin: 10,
   },
   logo: {
     height: 150,
